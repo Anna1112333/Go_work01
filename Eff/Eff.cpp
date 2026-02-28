@@ -98,12 +98,12 @@ int main()
    out_str0.write(reinterpret_cast<const char*>(&numStrings), sizeof(numStrings));
 
     // Построчная запись: сначала длина строки, затем данные
-    for (const auto& str : str0) {
-        size_t strLength = str.size();
+    for (const auto& str : li) {
+        size_t strLength = str.data.size();
         // Записываем длину строки
        out_str0.write(reinterpret_cast<const char*>(&strLength), sizeof(strLength));
         // Записываем сами данные строки
-       out_str0.write(str.c_str(), strLength);
+       out_str0.write(str.data.c_str(), strLength);
     }
 
    out_str0.close();

@@ -3,6 +3,8 @@
 *.obj
 *.exe
 *.out
+# вернула обратно outlet.out
+!outlet.out
 *.a
 *.so
 *.dylib
@@ -48,7 +50,10 @@ conanbuildinfo.txt
 .vscode/
 .idea/
 *.sln
+#добавила обратно Eff.sln Eff.vcxproj
+!Eff.sln  
 *.vcxproj
+!Eff.vcxproj
 *.vcxproj.filters
 *.vcxproj.user
 
